@@ -1,0 +1,7 @@
+# Ignore old backup website directory
+old_website/
+
+# Ignore scratch & temporary scripts
+*.ps1
+scratch/
+.system_generated/

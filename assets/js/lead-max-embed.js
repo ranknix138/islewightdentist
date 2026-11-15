@@ -1,0 +1,1 @@
+if (!window.leadMaxEmbedListener) { window.leadMaxEmbedListener = true; window.addEventListener("message", (m)=>{ if (m.data.leadmax && m.data.height) { document.querySelectorAll('iframe.lead-max-embed, #protocus-frame-Zm9ybXMvSFNPL09ydGhvZG9udGljcyBFbnF1aXJ5IEZvcm0gKGNvcHkpLnR4dA').forEach((e) => { e.style.height = m.data.height + 'px' }); } }); }
