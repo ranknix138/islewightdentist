@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=6">
+  <link rel="stylesheet" href="assets/css/styles.css?v=7">
 </head>
 <body>
 
@@ -67,9 +67,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span>01983 433218</span>
           </a>
-          <a href="#register-form" class="btn btn-primary btn-sm">
-            Pre-Register Online &rarr;
-          </a>
+          <a href="#register-form" class="btn btn-gold btn-sm btn-header-cta"><span class="cta-full">Pre-Register Online &rarr;</span><span class="cta-short">Register</span></a>
           <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
@@ -153,56 +151,39 @@
     </section>
 
     <!-- NATIVE NEW PATIENT REGISTRATION FORM SECTION -->
-    <section id="register-form" class="section" style="background:#f8fafc;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-      <div class="container" style="max-width:860px;">
-        <div style="text-align:center;margin-bottom:2rem;">
+    <section id="register-form" class="section" style="background:#f8fafc;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 0;">
+      <div class="container" style="max-width:760px;padding:0 1rem;box-sizing:border-box;">
+        <div style="text-align:center;margin-bottom:1.85rem;">
           <span class="eyebrow nhs">Official Online Intake</span>
           <h2 class="section-title">Complete Your <span class="accent">Pre-Registration</span></h2>
-          <p class="section-lead">Secure your place on our patient list in under 2 minutes. All submissions go straight to our clinical reception at <strong>isleofwight@onesmiledental.co.uk</strong>.</p>
+          <p class="section-lead" style="max-width:620px;margin:0.5rem auto 0;font-size:0.92rem;">Secure your place on our patient list in under 60 seconds. Confidential and delivered directly to <strong>isleofwight@onesmiledental.co.uk</strong>.</p>
         </div>
 
-        <div style="background:#ffffff;border:1.5px solid var(--border);border-radius:22px;padding:2.25rem;box-shadow:0 12px 36px rgba(11,31,58,0.06);position:relative;">
+        <div class="pre-reg-card">
           <form id="new-patient-full-form" class="form-grid" action="https://formsubmit.co/isleofwight@onesmiledental.co.uk" method="POST">
             <!-- Hidden configuration for FormSubmit -->
             <input type="hidden" name="_subject" value="New Patient Pre-Registration - Isle Wight Dentist">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_replyto" value="isleofwight@onesmiledental.co.uk">
 
-            <!-- 1. Care Preference & Registration Type -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;background:#f8fafc;padding:1.15rem;border-radius:14px;border:1px solid var(--border);">
-              <div>
-                <label class="form-label" for="np-care-type">Dental Care Preference *</label>
-                <select id="np-care-type" name="Care Preference" class="form-input" required>
-                  <option value="NHS Dental Care">NHS Dental Care (Standard Band Fees)</option>
-                  <option value="Private Dental Care">Private Dental Care (Extended Options)</option>
-                  <option value="Both / Either">Either (Whichever appointment is first available)</option>
-                </select>
-              </div>
-              <div>
-                <label class="form-label" for="np-reg-type">Who Are You Registering? *</label>
-                <select id="np-reg-type" name="Registration Type" class="form-input" required>
-                  <option value="Myself Only">Just Myself</option>
-                  <option value="Myself and Partner">Myself &amp; Partner</option>
-                  <option value="Myself and Children">Myself &amp; Children (Family Registration)</option>
-                  <option value="Entire Family">Entire Family (Multiple Members)</option>
-                </select>
-              </div>
+            <!-- 1. Care Preference -->
+            <div>
+              <label class="form-label" for="np-care-type">Dental Care Preference *</label>
+              <select id="np-care-type" name="Care Preference" class="form-input" required>
+                <option value="NHS Dental Care">NHS Dental Care (Standard Band Fees)</option>
+                <option value="Private Dental Care">Private Dental Care (Extended Options)</option>
+                <option value="Both / Either">Either (Whichever appointment is first available)</option>
+              </select>
             </div>
 
-            <!-- 2. Personal Details -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">
-              <div>
-                <label class="form-label" for="np-fullname">Full Name *</label>
-                <input id="np-fullname" name="Full Name" type="text" class="form-input" required placeholder="First and last name">
-              </div>
-              <div>
-                <label class="form-label" for="np-dob">Date of Birth *</label>
-                <input id="np-dob" name="Date of Birth" type="date" class="form-input" required>
-              </div>
+            <!-- 2. Full Name -->
+            <div>
+              <label class="form-label" for="np-fullname">Full Name *</label>
+              <input id="np-fullname" name="Full Name" type="text" class="form-input" required placeholder="First and last name">
             </div>
 
-            <!-- 3. Contact Info -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">
+            <!-- 3. Phone & Email Stacked Row -->
+            <div class="form-stack-row">
               <div>
                 <label class="form-label" for="np-phone">UK Phone / Mobile *</label>
                 <input id="np-phone" name="Phone Number" type="tel" class="form-input" required placeholder="07xxx xxxxxx">
@@ -213,11 +194,11 @@
               </div>
             </div>
 
-            <!-- 4. Address & Postcode -->
-            <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;">
+            <!-- 4. Postal Area & Postcode -->
+            <div class="form-stack-row">
               <div>
-                <label class="form-label" for="np-address">Postal Address (Isle of Wight) *</label>
-                <input id="np-address" name="Address" type="text" class="form-input" required placeholder="Street address &amp; town">
+                <label class="form-label" for="np-address">Town / Area (Isle of Wight) *</label>
+                <input id="np-address" name="Town or Area" type="text" class="form-input" required placeholder="e.g. Newport, Ryde, Cowes">
               </div>
               <div>
                 <label class="form-label" for="np-postcode">Postcode *</label>
@@ -225,49 +206,26 @@
               </div>
             </div>
 
-            <!-- 5. NHS Exemption & Appointment Preference -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;">
-              <div>
-                <label class="form-label" for="np-exemption">NHS Charge Exemption Status</label>
-                <select id="np-exemption" name="NHS Exemption Status" class="form-input">
-                  <option value="Standard Paying NHS Patient">Standard Paying NHS Patient</option>
-                  <option value="Under 18 or Full-Time Student under 19 (100% Free)">Under 18 or Full-Time Student (100% Free)</option>
-                  <option value="Pregnant or New Mother with MatEx (100% Free)">Pregnant or New Mother (100% Free)</option>
-                  <option value="Universal Credit / Income Support / HC2 (100% Free)">Universal Credit / Income Support (100% Free)</option>
-                  <option value="Private Patient (Not Applicable)">Private Patient (Not Applicable)</option>
-                </select>
-              </div>
-              <div>
-                <label class="form-label" for="np-timing">Preferred Appointment Window</label>
-                <select id="np-timing" name="Preferred Timing" class="form-input">
-                  <option value="Any Weekday Morning (09:00 - 12:00)">Any Weekday Morning (09:00 &ndash; 12:00)</option>
-                  <option value="Any Weekday Afternoon (13:00 - 17:00)">Any Weekday Afternoon (13:00 &ndash; 17:00)</option>
-                  <option value="Late Evening (Mon/Thu up to 19:00)">Late Evening (Mon/Thu up to 19:00)</option>
-                  <option value="Saturday Morning (09:00 - 12:00)">Saturday Morning (09:00 &ndash; 12:00)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- 6. Dental Concerns & Notes -->
+            <!-- 5. Dental Concerns & Notes (Optional) -->
             <div>
-              <label class="form-label" for="np-notes">Dental Concerns, Phobia, or Additional Family Names (Optional)</label>
-              <textarea id="np-notes" name="Dental Concerns & Notes" class="form-input" rows="3" placeholder="Tell us if you have toothache, anxious about the dentist, or list names of children/family to register..."></textarea>
+              <label class="form-label" for="np-notes">Dental Phobia, Toothache or Additional Family Members (Optional)</label>
+              <textarea id="np-notes" name="Dental Concerns & Notes" class="form-input" rows="3" placeholder="Tell us if you have toothache, anxious about the dentist, or list names of children/family..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-gold" style="width:100%;font-size:1.05rem;padding:0.95rem;border-radius:12px;box-shadow:0 6px 18px rgba(217,119,6,0.3);">
+            <button type="submit" class="btn btn-gold" style="width:100%;font-size:1.02rem;padding:0.92rem;border-radius:12px;box-shadow:0 6px 18px rgba(217,119,6,0.3);">
               Complete My Pre-Registration Online &rarr;
             </button>
 
-            <div style="display:flex;align-items:center;justify-content:center;gap:0.55rem;font-size:0.82rem;color:var(--muted);margin-top:0.35rem;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <div style="display:flex;align-items:center;justify-content:center;gap:0.45rem;font-size:0.8rem;color:var(--muted);margin-top:0.35rem;text-align:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               <span>100% Free &bull; Zero upfront charge &bull; Sent to <strong>isleofwight@onesmiledental.co.uk</strong></span>
             </div>
           </form>
 
-          <div id="new-patient-success" style="display:none;padding:2rem;border-radius:16px;background:#ecfdf5;border:1.5px solid #a7f3d0;color:#065f46;text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:0.5rem;">🎉</div>
-            <strong style="display:block;font-size:1.45rem;color:#065f46;margin-bottom:0.5rem;">Priority Pre-Registration Confirmed!</strong>
-            <p style="font-size:0.96rem;line-height:1.6;margin-bottom:1.25rem;color:#047857;">
+          <div id="new-patient-success" style="display:none;padding:1.85rem 1rem;border-radius:16px;background:#ecfdf5;border:1.5px solid #a7f3d0;color:#065f46;text-align:center;">
+            <div style="font-size:2.2rem;margin-bottom:0.35rem;">🎉</div>
+            <strong style="display:block;font-size:1.35rem;color:#065f46;margin-bottom:0.4rem;">Priority Pre-Registration Confirmed!</strong>
+            <p style="font-size:0.92rem;line-height:1.6;margin-bottom:1.15rem;color:#047857;">
               Thank you! Your intake application has been successfully logged with our reception team at <strong>isleofwight@onesmiledental.co.uk</strong>.<br>
               As our practice clinical books open, our Newport team will phone you directly to book your first dental check-up.
             </p>
@@ -473,7 +431,7 @@
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.55rem;margin-top:0.85rem;">
         <a href="tel:01983433218" class="btn btn-teal btn-sm">Call 01983 433218</a>
-        <a href="#register-form" class="btn btn-gold btn-sm">Pre-Register Online</a>
+        <button type="button" class="btn btn-gold btn-sm" data-open-lead-modal data-lead-topic="New NHS / Private Pre-Registration">Pre-Register Online</button>
       </div>
 
       <div class="sheet-grid">
@@ -542,7 +500,7 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=6" defer></script>
+  <script src="assets/js/main.js?v=7" defer></script>
 </body>
 </html>
 
